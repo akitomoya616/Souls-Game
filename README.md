@@ -1,25 +1,32 @@
 # Dark Souls Simulator
 
-Developed by Sitong Lu.
-
 ## Introduction:
 
-The output of this program is a mini game that imitates the Dark Souls series.
+An Indie demo of a 3D first-person perspective game developed by Sitong Lu.
+
+Constructed with UI, transparent objects, sky box, collision detection, lighting effects produced by a modified shader, and illusory walls with animated textures. Managed to mimic the game scenario experienced in Souls game.
+
+[Recorded demo can be found here](https://drive.google.com/file/d/1i8sZmz35qDkBEU3uEd2EGe5iPiT1X4QQ/view?usp=sharing)
+
+Screenshot in game
+![Dark Souls Simulator](https://github.com/akitomoya616/akitomoya616.github.io/blob/master/images/DarkSoulsSimulator.png)
+Gif demo (quality of the recorded Gif demo is a bit low)
+![Dark_Souls_GIF](https://github.com/akitomoya616/akitomoya616.github.io/blob/master/images/dark_souls_demo.gif) 
 
 
 ## Instructions:
 
-Use MSYS2 MinGW to run the following code.
+Use `MSYS2 MinGW` to run the following code.
 
-Use cd command to direct to this directory.
+Use `cd` command to direct to this directory.
 
-Call make from the complier to compile the program from source code.
+Call `make` from the complier to compile the program from source code.
 
-Call final/ or ./final to run the program. The program will first show you the first person view of the scene.
+Call `final/` or `./final` to run the program. The program will first show you the first person view of the scene.
 
-To view the whole scene in Perspective view or in Orthogonal view, please first press "o" or "O" to enter the developer mode, then press "m" or "M" to switch the viewing mode.
+To view the whole scene in Perspective view or in Orthogonal view, please first press `o` or `O` to enter the developer mode, then press `m` or `M` to switch the viewing mode.
 
-Call make clean from the complier to clear out all the .o files.
+Call `make clean` from the complier to clear out all the .o files.
 
 
 ## How To Play This Game:
@@ -39,19 +46,19 @@ I was trying to recreate the feeling of "the wall here is a bit damp, so the lig
 
 ## Highlights:
 
-	1) Collision detection (thought it was hard coded by comparing the current position with banned areas' positions)
+1) Collision detection (thought it was hard coded by comparing the current position with banned areas' positions)
 
-	2) Transparent objects, including hourglass (with powder in it) on the table, ceiling that allows you to see the sky, golem boss in the boss room
+2) Transparent objects, including hourglass (with powder in it) on the table, ceiling that allows you to see the sky, golem boss in the boss room
 
-	3) Hidden room with dynamic collision detection setting on that illusory wall (cannot pass it when the illusory wall is there)
+3) Hidden room with dynamic collision detection setting on that illusory wall (cannot pass it when the illusory wall is there)
 
-	4) Customized shader that shows different light reflecting effect on specific walls 
+4) Customized shader that shows different light reflecting effect on specific walls 
 
-## Changes made after receiving the feedback from Project Review assignment:
+## Changes made after receiving the feedback:
 
-	1) Resized all the textures to power of two, instead of some odd values
+1) Resized all the textures to power of two, instead of some odd values
 
-	2) The fog gate at the front of the boss room is now "floating" like a GIF. What I did was setting up the Texture coordinates with parameter that frequently updates its own value
+2) The fog gate at the front of the boss room is now "floating" like a GIF. What I did was setting up the Texture coordinates with parameter that frequently updates its own value
 
 
 
@@ -59,63 +66,63 @@ I was trying to recreate the feeling of "the wall here is a bit damp, so the lig
 
 Buttons that can be called right after entering the game:
 
-	1) direction buttons: adjust view position
+1) direction buttons: adjust view position
 
-	2) WASD buttons: walk around in the scene
+2) WASD buttons: walk around in the scene
 
-	3) esc: end the program
+3) esc: end the program
 
-	4) o/O: developer mode on/off
+4) o/O: developer mode on/off
 
 Buttons that can be called after switching to Developer Mode:
 
-	- 0: reset view position
+1) 0: reset view position
 
-	- c/C: collision detection on/off
+2) c/C: collision detection on/off
 
-	3) m/M: switch viewing mode (orthogonal/perspective/first person view)
+3) m/M: switch viewing mode (orthogonal/perspective/first person view)
 
-	4) l: light ball rotation on/off
+4) l: light ball rotation on/off
 
-	5) L: light scene on/off
+5) L: light scene on/off
 
-	6) f1: smooth on/off
+6) f1: smooth on/off
 
-	7) f2: local viewer on/off
+7) f2: local viewer on/off
 
-	8) f3: distance of lighting ball close/far
+8) f3: distance of lighting ball close/far
 
-	- -: fov - by 1
+9) -: fov - by 1
 
-  - +: fov +
+10) +: fov +
 
-              11) q: ambient-
+11) q: ambient-
 
-              12) Q: ambient+
+12) Q: ambient+
 
-              13) x: specular-
+13) x: specular-
 
-              14) X: specular+
+14) X: specular+
 
-              15) e: emission-
+15) e: emission-
 
-              16) E: emission+
+16) E: emission+
 
-              17) n: shininess-
+17) n: shininess-
 
-              18) N: shininess+
+18) N: shininess+
 
-              19) 1: enable/disable xyz axis
+19) 1: enable/disable xyz axis
 
 
 ## Reused Codes:
 
-	1) the general lighting setting in display() function.
+1) the general lighting setting in display() function.
 
-	2) code for calling shader in final.c file, including ReadText, PrintShaderLog, PrintProgramLog, CreateShader, and CreateShaderProg, 
+2) code for calling shader in final.c file, including ReadText, PrintShaderLog, PrintProgramLog, CreateShader, and CreateShaderProg, 
 	    were copied from ex27 and modified a little bit so that the program is only using one shader.
 
-	3) sitong.frag is a modified version of pixtex.frag from ex27.
+3) sitong.frag is a modified version of pixtex.frag from ex27.
 
 All the other codes were either inherited from HW6 or been purely created by myself, 
 even including those ways for generating hemispheres and applying textures on round objects (I realized that the professor covered the example which generated a coin object after finishing creating a clock object totally by myself in my own project).
