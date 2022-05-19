@@ -114,15 +114,3 @@ Buttons that can be called after switching to Developer Mode:
 
 19) 1: enable/disable xyz axis
 
-
-## Reused Codes:
-
-1) the general lighting setting in display() function.
-
-2) code for calling shader in final.c file, including ReadText, PrintShaderLog, PrintProgramLog, CreateShader, and CreateShaderProg, 
-	    were copied from ex27 and modified a little bit so that the program is only using one shader.
-
-3) sitong.frag is a modified version of pixtex.frag from ex27.
-
-All the other codes were either inherited from HW6 or been purely created by myself, 
-even including those ways for generating hemispheres and applying textures on round objects (I realized that the professor covered the example which generated a coin object after finishing creating a clock object totally by myself in my own project).
